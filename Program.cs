@@ -9,6 +9,10 @@ builder.Services.AddDbContext<NotesDbContext>(options =>
 
 var app = builder.Build();
 
+// frontend files
+app.UseDefaultFiles();
+app.UseStaticFiles();
+
 // Endpoints
 
 app.MapGet("/api/notes", async (NotesDbContext db) =>
